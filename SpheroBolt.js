@@ -26,6 +26,22 @@ async function ninetyDegree() {
     await delay(1);
     await roll((getHeading() + 90), 60, 4); // heading 90 degrees at 60 speed for 4 seconds
 }
+/**
+ * The function goes forward for 2 seconds at the speed of 50
+ * It turns 90 degrees 
+ * Then it repeats that untill a square is created
+*/
+async function square() {
+    await roll ((getHeading() + 0), 50, 2);
+    await spin(90, 2);
+    await roll ((getHeading() + 0), 50, 2);
+    await spin(90, 2);
+    await roll ((getHeading() + 0), 50, 2);
+    await spin(90, 2);
+    await roll ((getHeading() + 0), 50, 2);
+    await spin(90, 2);
+    await roll ((getHeading() + 0), 50, 2);
+}
 
 /**
  * startProgram function sends the program to your Sphero Bolt
