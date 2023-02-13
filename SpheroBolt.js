@@ -44,8 +44,27 @@ async function square() {
 }
 
 /**
+ * The speed gets set to 50
+ * The front LED gets set to a random color
+ * The Main LED gets set to a random color
+ * The Back LED gets set to a random color
+ * The Main LED strobes
+*/ 
+async function ledColor() {
+    setSpeed(50)
+    setFrontLed(getRandomColor())
+    setMainLed(getRandomColor())
+    setBackLed(getRandomColor())
+    await strobe ({ r: 255, g: 57, b: 66 }, (3 / 15) * 0.5, 15)
+    await Sound.Animal.play(true)
+}
+
+/**
  * startProgram function sends the program to your Sphero Bolt
 */
 async function startProgram() {
+   await ledColor()
+    await helloWorld()
     await ninetyDegree()  //<--Calling the ninetyDegree function to run it
+    await square()
 }
