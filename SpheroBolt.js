@@ -36,10 +36,16 @@ async function green(){
     await roll ((getHeading() + 0), 31, 2)
     await spin(270, 2)
     setMainLed({ r: 0, g: 225, b: 0 })
-    await roll ((getHeading() + 0), 35, 2)
+    await roll ((getHeading() + 0), 32, 2)
 }
 
-
+async function soundThree(){
+    await spin(270, 2)
+    await roll ((getHeading() + 0), 215, 2)
+    await spin(45, 2)
+    await roll ((getHeading() + 0), 215, 2)
+    await Sound.Animal.Cat.play()
+}
 
 async function startProgram() {
     await blue()
@@ -47,4 +53,5 @@ async function startProgram() {
     await red()
     await soundTwo()
     await green()
+    await soundThree()
 } 
