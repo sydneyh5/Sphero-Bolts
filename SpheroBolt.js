@@ -48,7 +48,7 @@ async function soundThree(){
 }
 
 async function purple(){
-    await spin (34, 2)
+    await spin (37, 2)
     await roll ((getHeading() + 0), 32, 2)
     setMainLed({ r: 40, g: 0, b: 200 })
 }
