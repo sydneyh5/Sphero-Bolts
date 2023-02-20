@@ -9,9 +9,9 @@ async function blue() {
 }
 
 async function soundOne (){
-    await roll ((getHeading() + 0), 50, 2)
+    await roll ((getHeading() + 0), 49, 2)
     await spin(90, 2)
-    await roll ((getHeading() + 0), 37, 2)
+    await roll ((getHeading() + 0), 35, 2)
     await Sound.Animal.Alligator.play()
 }
 
@@ -33,9 +33,9 @@ async function soundTwo(){
 
 async function green(){
     await spin(45, 2)
-    await roll ((getHeading() + 0), 27, 2)
+    await roll ((getHeading() + 0), 23, 2)
     await spin(270, 2)
-    setMainLed({ r: 0, g: 230, b: 0 })
+    setMainLed({ r: 0, g: 250, b: 0 })
     await roll ((getHeading() + 0), 33, 2)
 }
 
@@ -44,12 +44,12 @@ async function soundThree(){
     await roll ((getHeading() + 0), 30, 2)
     await spin (326, 2)
     await roll ((getHeading() + 0), 32, 2)
-    await Sound.Animal.Cat.play()
+    await Sound.Animal.Monkey.play()
 }
 
 async function purple(){
     await spin (37, 2)
-    await roll ((getHeading() + 0), 32, 2)
+    await roll ((getHeading() + 0), 40, 2)
     setMainLed({ r: 40, g: 0, b: 200 })
 }
 
